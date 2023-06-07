@@ -1,0 +1,5 @@
+List the requirements of your calculator design here
+must have a screen showing the output 
+have buttons that work to carry out mathematical operations ie. numbers, arithmetic operators (+, -, division and multiplication)
+An equals button to obtain the results
+A reset/clear button 

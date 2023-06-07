@@ -1,0 +1,48 @@
+
+<!-- Lab: Manage Data 1 -->
+
+<!-- In this lab you will show your understanding of using very simple templates.
+We are syncing what is on the screen with what is in the data. In the future we will make it much more complex, but for now, we are really just after the concepts. 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1> news </h1>
+
+<div id="news-list"></div>
+<div class = "title"></div>
+<div class = "content"></div>
+
+<script>
+let output = document.querySelector("div");  
+let news=[
+                    { id:1, title: 'News1', content:"bla"},
+                    { id:2, title: 'News2', content:"ble"},
+                    { id:3, title: 'News3', content:"blu"},
+]
+ let timer = null;
+ let index = 0;
+
+    function printNews() {
+                    output.innerHTML = "News ID: "+ news[index].id +"<br>"
+                    "News Title: "+ news[index].title +"<br>"+
+                    "News content: "+ news[index].content + "<br>"+"<br>"+"<br>";
+
+if(index === news.length-1){
+    clearInterval(timer);
+ } else {
+    index++;
+ }
+    }
+timer = setInterval (printNews, 5000);
+</script>
+    
+</body>
+</html>

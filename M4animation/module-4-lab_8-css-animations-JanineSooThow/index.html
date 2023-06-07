@@ -1,0 +1,47 @@
+
+<!-- Lab 8: CSS Animation Lab -->
+
+<!-- Make a square slider so that it slides from the top to the bottom and 
+    returns to its original position, changing background colour in the process -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style type = "text/css">
+
+    .squareone {
+     background-color: red; 
+     width: 100px;
+     height: 100px;
+     animation-name: slidein; 
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+     margin: auto;
+   }
+   @keyframes slidein {
+    from {
+        margin-top: 0%;           
+  }
+   50% {
+    top: calc(100vh - 100px);
+    background-color: blue; /* set your ending background color here */
+  }
+  to {
+    margin-top: 50%; 
+  }   
+}
+   </style>
+    <body>
+    
+    <!-- Your code goes here  * Hint - start by creating a div with a background color and set the width/height to 100px -->
+    <div class="squareone"></div>
+    
+    </style>
+    </body> 
+    </html>

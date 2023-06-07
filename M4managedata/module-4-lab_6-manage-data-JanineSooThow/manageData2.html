@@ -1,0 +1,59 @@
+
+<!-- Lab: Manage Data 2 -->
+
+<!-- This time you will need to add news to the previous array. 
+    So when the interval function come through, it will add your latest post. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="output"></div>
+<form>
+    <input type="text" id="title">
+    <input type="text" id="content">
+    <button id="addnews"> Add News </button>
+</form>
+
+    <script>
+
+        let news=[
+                { id: 1, title: 'News1', content:"bla"},
+                { id: 2, title: 'News2', content:"ble"},
+                { id: 3, title: 'News3', content:"blu"}
+            ];
+            let timer = null;
+ let index = 0;
+
+    function printNews() {
+        console.log(output)
+                    output.innerHTML = "News ID: "+ news[index].id +"<br>"
+                                        "News Title: "+ news[index].title +"<br>"+
+                                        "News content: "+ news[index].content + "<br>"+"<br>"+"<br>";
+
+                                        if(index === news.length-1){
+                                            clearInterval(timer);
+                                        } else {
+                                            index++;
+                                        }
+}
+timer = setInterval (printNews, 5000);
+document.getElementById("addnews").addEventListener("click", addnews)
+function addnews(event){
+    event.preventDefault()
+    let newsItem = {
+        id: news.length + 1,
+        title: document.getElementById("title").value,
+        content: document.getElementById("content").value
+}
+}
+</script>
+    </script>
+    
+</body>
+</html>

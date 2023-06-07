@@ -1,0 +1,42 @@
+/* did the figma lab first and realised i needed extra buttons hence output looks different */
+h1 {
+    text-align: center;
+    color: purple;
+
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid purple; 
+    background-color: purple;
+    padding: 30px;
+    width: 60%
+  }
+input[type = "data"] {
+    width: 95%;
+    height: 40px;
+    font-size: 25px;
+    color: purple;
+
+}
+input[type= "clrbutton"] {
+    width:40%;
+    height: 40px;
+    font-size: 25px;
+    color: purple;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+input[type="button"] {
+    width: 95%;
+    padding: 20px 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+

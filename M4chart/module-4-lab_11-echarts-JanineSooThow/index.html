@@ -1,0 +1,68 @@
+
+<!-- Echarts lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echarts</title>
+    <!--bootstrap link for echarts-->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script> 
+</head>
+<body>
+
+    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <div id="main" style="width: 900px;height:600px;"></div>
+    <script type="text/javascript">
+
+      // get json placeholder data
+
+        fetch('https://fakestoreapi.com/products')
+        .then((response) => response.json())
+        .then((json) => {
+      
+          console.log(json);
+          json.map((item)=>{
+            //console.logs(item)
+          if(item.category==="men's clothing"){option.series[0].data[0]++}
+          if(item.category==="jewelery"){option.series[0].data[1]++}
+          if(item.category==="electronics"){option.series[0].data[2]++}
+          if(item.category==="women's clothing"){option.series[0].data[3]++}
+
+        })
+      })
+        .then(()=>{
+
+           // Display the chart
+          myChart.setOption(option);
+        })
+
+      // Initialise the echarts instance based on the prepared dom
+      var myChart = echarts.init(document.getElementById('main'));
+
+      // Specify the configuration items and data for the chart
+      var option = {
+        title: {
+          text: 'Fake store API items in each category'
+        },
+        xAxis: {
+          data: ["men's clothing","jewelery","electronics","women's clothing"]
+        },
+        yAxis: {},
+        series: [
+          {
+            name: 'posts',
+            type: 'bar',
+            data: [0, 1, 5, 2]
+    
+          }
+        ]
+      };
+
+    </script>
+  </body>
+</html>
+
+
